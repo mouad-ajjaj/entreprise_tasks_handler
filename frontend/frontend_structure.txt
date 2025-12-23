@@ -1,0 +1,44 @@
+Folder PATH listing for volume Windows-SSD
+Volume serial number is 5247-4429
+C:\USERS\MOUAD\GESTION-EMPLOYES-AZURE\FRONTEND\SRC
+|   App.css
+|   App.jsx
+|   index.css
+|   main.jsx
+|   styles.css
+|   
++---api
+|       axiosClient.js
+|       
++---assets
+|       react.svg
+|       
++---components
+|       ProtectedRoute.jsx
+|       Sidebar.jsx
+|       
++---context
+|       AuthContext.jsx
+|       
+\---pages
+        Dashboard.jsx
+        Documents.jsx
+        Employees.jsx
+        Login.jsx
+        Reminders.jsx
+        Tasks.jsx
+        Users.jsx
+        
+
+ROOT FILES:
+.env
+.env.production
+.gitignore
+build-front.zip
+build.zip
+eslint.config.js
+index.html
+package-lock.json
+package.json
+README.md
+vite.config.js

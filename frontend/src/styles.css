@@ -1,0 +1,48 @@
+body {
+  background-color: #f5f5f7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Sidebar */
+.app-sidebar {
+  background: #ffffff;
+  border-right: 1px solid #e5e5ea;
+}
+
+.app-sidebar .nav-link {
+  color: #1c1c1e;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.app-sidebar .nav-link.active {
+  background: #007aff;
+  color: #ffffff;
+}
+
+/* Main content wrapper */
+.app-main {
+  background: #f5f5f7;
+}
+
+/* Card-style container for pages */
+.app-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e5e5ea;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #007aff;
+  border-color: #007aff;
+  border-radius: 999px;
+  padding-inline: 1.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #0062cc;
+  border-color: #0062cc;
+}
