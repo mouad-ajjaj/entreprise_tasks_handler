@@ -23,7 +23,7 @@ jobs:
     - name: Install and Build
       working-directory: ./frontend
       env:
-        VITE_API_BASE_URL: https://func-projectazureemov2-hh6wh9.azurewebsites.net
+        VITE_API_BASE_URL: https://func-projectazureemov2-hh6wh9.azurewebsites.net/api
       run: |
         npm install
         npm run build
