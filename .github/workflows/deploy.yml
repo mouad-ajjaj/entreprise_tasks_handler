@@ -1,0 +1,33 @@
+name: Deploy React to Azure Storage
+
+on:
+  push:
+    branches: [ main ]  # Change this if your branch is named 'master'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install and Build
+      working-directory: ./frontend
+      run: |
+        npm install
+        npm run build
+
+    - name: Upload to Azure Storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob upload-batch --destination '$web' --source ./frontend/dist --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" --overwrite

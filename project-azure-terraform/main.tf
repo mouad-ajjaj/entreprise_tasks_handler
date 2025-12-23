@@ -32,10 +32,10 @@ resource "azurerm_storage_account" "storage" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
-  # C'est ICI la magie : on active l'hébergement web directement dans le storage
+  # ENABLE STATIC WEBSITE HOSTING
   static_website {
     index_document     = "index.html"
-    error_404_document = "404.html"
+    error_404_document = "index.html" # Crucial for React Router
   }
 }
 
@@ -100,4 +100,3 @@ resource "azurerm_linux_function_app" "function" {
     "STORAGE_CONNECTION_STRING"      = azurerm_storage_account.storage.primary_connection_string
   }
 }
-# La ressource Static Web App a été supprimée
